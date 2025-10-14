@@ -1,0 +1,78 @@
+Ques1:- Explain the difference between frontend, backend, and full-stack development with suitable real-world examples.
+
+Ans:- 1.Frontend Development :- It focuses on the client-side of a web application everything the user sees , it means the design,buttons
+,menus,colors and  animations.It is build using HTML-structure,CSS-styling,JavaScript-logic and behaviour.
+Example:-When you open a Amazon Prime the homepage layput,movie thumbnails and hover animations ,that is frontend.
+
+2.Backend Development:- It focuses on server,logic,data handling and communication with the database.It is builod using languages like
+Python,Java,Node.js,PHP and frameworks like Django,Spring boot etc.
+Example:- When you log into Amazon Prime the login page opens and the backend verifies your username and password.
+
+3.Full-Stack Deveopment:- It combines both frontend and backend skills to build complete web applications.
+Example:-A full stack developer can build both amaon prime UI and its backend and database logic.
+
+Ques2:-Create a simple diagram showing how the client-server model works in web architecture.
+
+Ans:-
+
+Ques3:-Describe how a browser requests and displays a web page from a web server.
+
+Ans:-1.User Action:-The user enters the URL in the browser.
+2.DNS Lookup:-The browser finds the IP address of the website’s server.
+3.HTTP Request: The browser sends a request to the server.
+4.Server Processing: The web server fetches the requested file (HTML, CSS, JS) and data from the database if needed.
+5.Response Sent: The server sends the data back to the browser.
+6.Rendering: The browser interprets the HTML, CSS, and JavaScript to display the page to the user.
+
+Ques4:-Identify and list the tools required to set up a web development environment. Explain the purpose of each.
+
+Ans:- 1.VS Code:-This is a code writer for writing in HTML,CSS,JavaScript.
+2.Web Browser:-To view the site and test the web pages.
+3.Git & Git hub:-Version control and code hosting.
+4.Node.js & npm:-It allows running JavaScript on the server.
+
+Ques5:-Explain what a web server is and give examples of commonly used servers.
+
+Ans:-Web Server is a software, hardware, or both that stores, processes, and delivers web content to users over the Internet
+using the HTTP or HTTPS protocol. When a user’s browser sends a request (like visiting a website), the web server responds
+by delivering the appropriate resources, such as HTML pages, images, videos, or data.
+
+Examples are:-1.Apache Web server
+2.Node.js
+3.Jigsaw server
+4.OpenLite speed
+5.Lighttpd
+
+Ques6:-Define the roles of a frontend developer, backend developer, and database administrator in a project.
+
+Ans:-Frontend Developer:-Design and codes the visual part of teh website(UI/UX).
+Backend Developer:- Builds and maintains the server ,APIs and logic.
+Full-Stack Developer:- Manages,secures and optimizes the database performance.
+
+Ques8:-Explain the difference between static and dynamic websites. Provide an example of each.
+
+Ans:-Static webiste:-The content is fixed and the same for every visitor unless manually updated by a developer. It have fixed content
+delivered to all users, built with HTML, CSS, and JavaScript.
+Generally faster because pages are pre-built and delivered directly from the server. 
+Complexity: Simpler to build and maintain, with lower hosting costs. 
+
+Example:- A portfolio site made with only HTML & CSS.
+
+Dynamic Website:- Content can change based on user, time, location, or other factors, providing a personalized and interactive experience. 
+It can generate content in real-time using server-side scripting languages and databases, allowing for personalized experiences.
+Slower to load because content is generated on the server for each request. 
+Complexity: More complex to build and requires more resources and maintenance. 
+
+Example:-YouTube, where content changes based on the user.
+
+Ques9:- Research and list five web browsers. Explain how rendering engines differ between them.
+
+Ans:- 1.Google Chrome      Rendering Engine:- Blink       Description:-Fast and modern engine used in Chromium browsers.
+2.Mozilla Firefox          Rendering Engine:- Gecko       Description:-Open-source and standards-compliant engine.
+3.Safari                   Rendering Engine:- WebKit      Description:-Optimized for Apple devices.
+4.Microsoft Edge           Rendering Engine:- Blink       Description:-Same engine as Chrome after 2020.
+5.Opera                    Rendering Engine:- Blink       Description:-Lightweight browser with built-in VPN and ad blocker.
+
+Ques10:- 10. Draw a labeled diagram showing the basic web architecture flow — client, server, database, and APIs.
+
+Ans:-
