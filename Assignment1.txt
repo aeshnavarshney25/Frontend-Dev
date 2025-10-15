@@ -76,3 +76,4 @@ Ans:- 1.Google Chrome      Rendering Engine:- Blink       Description:-Fast and 
 Ques10:- 10. Draw a labeled diagram showing the basic web architecture flow — client, server, database, and APIs.
 
 Ans:-
+
