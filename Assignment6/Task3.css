@@ -1,0 +1,21 @@
+/* Task3.css - 3-section homepage using Flexbox */
+*{box-sizing:border-box}
+/* Make the page a column flex container so footer can stay at the bottom when
+	content is short (sticky footer pattern). */
+html, body { height: 100%; }
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff;color:#111;display:flex;flex-direction:column;min-height:100vh}
+.header{background:#0b72b9;padding:0.75rem}
+.nav{display:flex;justify-content:space-around;max-width:1100px;margin:0 auto}
+.nav a{color:#fff;text-decoration:none}
+
+/* main should grow to fill available space so footer sits at page bottom */
+.main{display:flex;gap:1rem;max-width:1100px;margin:2rem auto;padding:0 1rem;flex:1}
+.box{flex:1;background:#f7fbff;padding:1.5rem;border-radius:8px;text-align:center;transition:transform 0.25s ease}
+
+/* hover rotate slightly */
+.box:hover{transform:rotate(2deg)}
+
+.footer{background:#0b72b9;color:#fff;text-align:center;padding:1rem;width:100%}
+
+/* Responsive: keep layout balanced, stack on small screens */
+@media (max-width:800px){.main{flex-direction:column}}

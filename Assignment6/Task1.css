@@ -1,0 +1,31 @@
+/* Task1.css - Portfolio layout using Flexbox */
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#222;background:#f6f8fb}
+.html, body { height: 100%; }
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#222;background:#f6f8fb;display:flex;flex-direction:column;min-height:100vh}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+
+/* Header with name left and nav right using flex */
+.header{background:#0b72b9;color:#fff}
+.header .container{display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:1.2rem;font-weight:700;padding:0.6rem 0}
+.nav a{color:#fff;text-decoration:none;margin-left:1rem}
+
+/* Main area two columns side-by-side using flex */
+.main{display:flex;gap:2rem;align-items:center;padding:2rem 1rem}
+.about{flex:2}
+.photo{flex:1;display:flex;align-items:center;justify-content:center}
+.photo img{max-width:100%;height:auto;border-radius:8px}
+
+/* Footer centered */
+/* Footer centered; no absolute positioning so it follows document flow
+  and will appear at the bottom when .main expands (flex:1). */
+.footer{text-align:center;padding:1rem;background:#0f1724;color:#fff;width:100%}
+
+/* Responsive: stack vertically below 700px */
+@media (max-width:700px){
+  .main{flex-direction:column;text-align:center}
+  .nav{margin-top:0.5rem}
+}
+
+/* center items vertically and horizontally where needed using align-items and justify-content */
