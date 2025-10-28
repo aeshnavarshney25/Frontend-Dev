@@ -1,0 +1,20 @@
+/* Task9.css - Newspaper/magazine 3-column layout using column-count and column-gap */
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia, 'Times New Roman', serif;background:#f6f5f3;color:#111}
+.wrap{max-width:1100px;margin:1.25rem auto;padding:1rem;background:#fff;border-radius:6px}
+
+.article{column-count:3;column-gap:2rem;column-fill:auto;padding:1.25rem}
+
+/* Heading spans all columns */
+.span{column-span:all;display:block;font-size:1.5rem;font-weight:700;margin-bottom:0.75rem}
+
+/* Float an image to left inside the multi-column layout */
+.float-img{float:left;margin:0 1rem 1rem 0;width:200px;border-radius:6px}
+
+.article p{margin:0 0 1rem;text-align:justify}
+
+/* Ensure readability on smaller screens: reduce columns */
+@media (max-width:1000px){.article{column-count:2}}
+@media (max-width:600px){.article{column-count:1}.float-img{float:none;display:block;margin:0 auto 1rem;width:80%}}
+
+/* background color and padding around main content provided in .wrap */

@@ -1,0 +1,44 @@
+/* Task10.css - Complete page demonstrating box model and positioning */
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg, #f7f9fc, #ffffff);color:#122}
+
+/* sticky header (uses position:sticky) */
+.topnav{position:sticky;top:0;background:rgba(11,114,185,0.95);color:#fff;z-index:100}
+.navwrap{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.8rem}
+.navwrap ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.navwrap a{color:#fff;text-decoration:none}
+.brand{margin:0;font-size:1.1rem}
+
+/* hero with large background image and centered text (use relative + absolute positioning) */
+.hero{position:relative;height:60vh;background-image:url('https://via.placeholder.com/1600x900');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center}
+.hero-inner{background:rgba(0,0,0,0.45);color:#fff;padding:2rem 3rem;border-radius:8px;text-align:center}
+.hero-inner h2{margin:0 0 0.5rem}
+
+.wrap{max-width:1100px;margin:0 auto;padding:2rem}
+
+/* about: two columns using grid */
+.about-grid{display:grid;grid-template-columns:1fr 400px;gap:2rem;align-items:center}
+.about-img img{width:100%;border-radius:8px}
+
+/* services: three boxes in a row using flexbox */
+.service-row{display:flex;gap:1rem}
+.service{flex:1;background:#fff;padding:1rem;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04)}
+
+/* contact form styles demonstrating margin/padding/border/outline */
+.contact form{display:flex;flex-direction:column;gap:0.5rem}
+.contact input{padding:0.6rem;border:1px solid #d8dee8;border-radius:6px}
+.contact button{padding:0.6rem 1rem;border:none;background:#0b72b9;color:#fff;border-radius:6px}
+
+/* footer */
+.footer{text-align:center;padding:1rem 0}
+
+/* demonstrate relative, absolute, fixed positioning: add an absolute badge in hero */
+.hero .badge{position:absolute;top:1rem;left:1rem;background:rgba(255,184,107,0.95);padding:0.4rem 0.6rem;border-radius:4px}
+
+/* use outline for visual debugging example */
+.service:first-child{outline:2px dashed rgba(11,114,185,0.08)}
+
+/* use rgba and gradients already used above */
+
+/* responsive rules */
+@media (max-width:900px){.about-grid{grid-template-columns:1fr}.service-row{flex-direction:column}}

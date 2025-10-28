@@ -1,0 +1,32 @@
+/* Task2.css - Multi-section informational page */
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:Georgia, 'Times New Roman', serif;background:#fafafa;color:#111}
+.wrap{max-width:1100px;margin:0 auto;padding:1rem}
+.hdr{background:#0b3d91;color:#fff;padding:0.75rem 0}
+.hdr nav a{color:#fff;margin-left:1rem;text-decoration:none}
+
+n.section{min-height:70vh;display:flex;align-items:center}
+.section .content{max-width:900px;margin:0 auto;padding:3rem;border:1px solid rgba(0,0,0,0.05);background:rgba(255,255,255,0.6)}
+
+/* full-width fixed background image (parallax-like) */
+.fixed-bg{background-image:url('https://via.placeholder.com/1600x900');background-size:cover;background-position:center;background-attachment:fixed}
+
+/* linear gradient section */
+.gradient-bg{background:linear-gradient(120deg,#ffecd2 0%,#fcb69f 100%)}
+
+/* radial gradient section */
+.radial-bg{background:radial-gradient(circle at 20% 30%, #a0e9ff, #ffffff)}
+
+.content h2{font-size:2rem;margin-top:0;font-weight:700}
+.content p{margin:1rem 0;padding:0}
+
+/* spacing and border usage */
+.content{padding:2rem;margin:1rem;border-radius:8px}
+
+.ftr{text-align:center;padding:1rem;background:#072a57;color:#fff}
+
+/* headings use different font sizes and weights */
+.content h2{font-weight:800}
+.hdr h1{font-size:1.5rem}
+
+/* Two sections demonstrate background-attachment: fixed for parallax-like effect (history & visit) */
