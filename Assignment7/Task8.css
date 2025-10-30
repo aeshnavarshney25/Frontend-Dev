@@ -1,0 +1,27 @@
+/* Task8.css - Box Model Exploration */
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Arial, sans-serif;margin:0;padding:2rem;background:#fff;color:#071133}
+header{text-align:center;margin-bottom:1rem}
+.demo{display:flex;gap:2rem;align-items:flex-start;justify-content:center}
+.outer{background:#f1f5f9;padding:1rem;border-radius:8px}
+
+/* Visual representation: border-box layers using colored outlines */
+.border-box{background:#fff;padding:16px;border:6px solid #60a5fa;margin:12px}
+.padding-area{background:#e6fffa;padding:18px;border:4px dashed #34d399}
+.content{background:#fff5f3;padding:12px;border:2px solid #fb7185}
+
+.notes{max-width:360px}
+
+/* Demonstrate box-sizing differences */
+.content.default-sizing{box-sizing:content-box}
+.content.box-border{box-sizing:border-box}
+
+/* Center demo using Flexbox on narrower screens */
+@media (max-width:800px){
+  .demo{flex-direction:column;align-items:center}
+}
+
+/* Comments:
+ - Content -> Padding -> Border -> Margin (outermost)
+ - box-sizing: border-box makes width/height include padding and border.
+*/

@@ -1,0 +1,26 @@
+/* Task10.css - Navigation Bar with Transitions & Responsive Stack */
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Arial, sans-serif;margin:0;padding:0;background:#f8fafc;color:#071133}
+.navbar{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 1rem;background:#0b72b9;color:#fff}
+.brand{font-weight:700}
+.nav-links{list-style:none;margin:0;padding:0;display:flex;gap:0.5rem;align-items:center}
+.nav-links a{display:block;padding:0.6rem 0.9rem;border-radius:6px;border:1px solid transparent;color:inherit;text-decoration:none;transition:all 0.3s ease}
+
+/* Hover transitions and subtle border */
+.nav-links a:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.14);transform:translateY(-2px)}
+.nav-links a.active{background:#fff;color:#0b72b9;box-shadow:0 6px 18px rgba(2,6,23,0.12)}
+
+/* Responsive: stack vertically below 700px */
+@media (max-width:700px){
+  .navbar{flex-direction:column;align-items:stretch}
+  .nav-links{flex-direction:column;gap:0.25rem;padding:0.5rem}
+}
+
+/* Footer simple centered text */
+footer{background:#fff;border-top:1px solid #e6eef8}
+
+/* Comments:
+ - transition: all 0.3s ease makes hover interactions smooth.
+ - active link is highlighted with distinct background and box-shadow.
+ - media query stacks navbar vertically below 700px.
+*/

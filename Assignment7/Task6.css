@@ -1,0 +1,23 @@
+/* Task6.css - CSS Transformations Showcase */
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Arial, sans-serif;margin:0;padding:2rem;background:#f8fafc;color:#071133}
+header{text-align:center;margin-bottom:1rem}
+.transforms{display:flex;gap:1rem;justify-content:center;align-items:center}
+.tile{display:flex;flex-direction:column;align-items:center;gap:0.5rem}
+.shape{width:140px;height:100px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(2,6,23,0.08);transition:all 0.4s ease}
+.label{font-size:0.95rem;color:#475569}
+
+/* Specific transform examples applied on hover */
+.tile.rotate:hover .shape{transform:rotate(12deg);background:#eef2ff}
+.tile.scale:hover .shape{transform:scale(1.12);background:#ffedd5}
+.tile.translate:hover .shape{transform:translateY(-14px) translateX(8px);background:#e6fffa}
+.tile.skew:hover .shape{transform:skewX(-8deg);background:#fce7f3}
+
+@media (max-width:700px){
+  .transforms{flex-direction:column}
+}
+
+/* Comments:
+ - transform: rotate/scale/translate/skew are GPU-accelerated and smooth with transition.
+ - transition: all 0.4s ease; used to animate the transform on hover.
+*/

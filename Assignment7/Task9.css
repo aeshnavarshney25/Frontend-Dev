@@ -1,0 +1,21 @@
+/* Task9.css - Outline & Focus Styling Form */
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Arial, sans-serif;margin:0;padding:2rem;background:#f8fafc;color:#071133}
+header{text-align:center;margin-bottom:1rem}
+.sample-form{max-width:520px;margin:0 auto;display:flex;flex-direction:column;gap:0.75rem}
+label{display:flex;flex-direction:column;font-size:0.95rem}
+input,textarea{padding:0.6rem;border:1px solid #cbd5e1;border-radius:8px;background:#fff;transition:box-shadow 0.18s ease,outline-color 0.18s ease}
+
+/* Outline styles and outline-offset demonstration */
+input:focus,textarea:focus{outline:3px solid #60a5fa;outline-offset:4px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+
+/* Different outline style examples using class or data attribute would be similar */
+button{padding:0.6rem 1rem;border-radius:8px;border:1px solid #cbd5e1;background:#0ea5e9;color:#fff;font-weight:600}
+
+/* Uniform spacing and subtle shadows */
+input,textarea,button{font-family:inherit}
+
+/* Comments:
+ - outline differs from border and does not affect layout; outline-offset creates a gap.
+ - Use :focus to highlight the active form control for accessibility.
+*/
