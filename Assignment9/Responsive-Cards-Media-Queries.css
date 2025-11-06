@@ -1,0 +1,17 @@
+/* Responsive-Cards-Media-Queries.css
+   4 cards: desktop 4 columns, tablet 2 columns, mobile 1 column.
+*/
+:root{--bg:#f8fafc;--card:#fff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);color:#0b1220;padding:1rem}
+.cards-wrap{display:flex;gap:1rem;align-items:stretch}
+.card{flex:1;padding:1rem;background:var(--card);border-radius:10px;box-shadow:0 10px 28px rgba(2,6,23,0.06);transition:background 180ms ease}
+.card:hover{background:linear-gradient(90deg,#fff,#f1f6ff)}
+
+@media (max-width:900px){.cards-wrap{flex-wrap:wrap}.card{flex:1 1 calc(50% - 1rem)}}
+@media (max-width:600px){.cards-wrap{flex-direction:column}.card{flex:auto}}
+
+/* Comments:
+ - We use flexbox with wrapping to adjust columns at breakpoints.
+ - Hover changes background color for visual feedback.
+*/

@@ -1,0 +1,40 @@
+/* Responsive-Image-Filter-Gallery.css
+   Grid gallery using auto-fit + minmax. Each image has a different filter
+   which is removed on hover via smooth transition.
+*/
+:root{--bg:#f7fafc;--muted:#6b7280}
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);color:#0b1220}
+.site-header{padding:1rem 1.25rem;text-align:center}
+.lead{color:var(--muted);margin:0.25rem 0}
+
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;padding:1rem;max-width:1200px;margin:0 auto}
+.gallery figure{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 8px 22px rgba(2,6,23,0.06);margin:0}
+.gallery img{width:100%;height:220px;object-fit:cover;display:block;transition:filter 350ms ease, transform 350ms ease}
+.gallery figcaption{padding:0.6rem 0.8rem;font-weight:600;text-align:center;background:#fff}
+
+/* Individual filters (applied initially) */
+.gallery figure:nth-child(1) img{filter:grayscale(100%)}
+.gallery figure:nth-child(2) img{filter:sepia(80%)}
+.gallery figure:nth-child(3) img{filter:blur(2px)}
+.gallery figure:nth-child(4) img{filter:brightness(0.7)}
+.gallery figure:nth-child(5) img{filter:contrast(130%)}
+.gallery figure:nth-child(6) img{filter:hue-rotate(90deg)}
+
+/* On hover/focus remove filter */
+.gallery figure:hover img,.gallery figure:focus-within img{filter:none;transform:scale(1.02)}
+
+/* Stack in a single column on small screens */
+@media (max-width:600px){
+  .gallery img{height:320px}
+  .gallery{grid-template-columns:1fr}
+}
+
+/* Accessibility: make figures keyboard focusable */
+.gallery figure{outline:none}
+.gallery figure:focus-within{box-shadow:0 12px 30px rgba(2,6,23,0.08)}
+
+/* Comments:
+ - Use repeat(auto-fit, minmax(200px, 1fr)) for responsive columns.
+ - Filters are removed on hover to show before/after effect.
+*/

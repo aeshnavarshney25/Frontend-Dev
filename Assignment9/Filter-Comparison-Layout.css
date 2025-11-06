@@ -1,0 +1,18 @@
+/* Filter-Comparison-Layout.css
+   Side-by-side images where the right image has a filter removed on hover.
+*/
+:root{--bg:#fbfdff}
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);color:#0b1220;padding:1rem}
+.compare{max-width:1100px;margin:0 auto;display:flex;gap:1rem;align-items:flex-start}
+.side{flex:1;background:#fff;padding:0;border-radius:10px;overflow:hidden;box-shadow:0 10px 28px rgba(2,6,23,0.06);text-align:center}
+.side img{width:100%;height:360px;object-fit:cover;display:block;transition:filter 320ms ease}
+.side .filtered{filter:brightness(0.6)}
+.side .filtered:hover{filter:none}
+.side figcaption{padding:0.75rem;font-weight:600}
+
+@media (max-width:700px){.compare{flex-direction:column}.side img{height:320px}}
+
+/* Comments:
+ - Right image shows filtered state; hover removes the filter smoothly.
+*/

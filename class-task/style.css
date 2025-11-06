@@ -1,0 +1,21 @@
+/* Default background for desktop */
+body {
+  background-color: rgb(221, 221, 16);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 50px;
+}
+
+/* Tablet view: width up to 768px */
+@media (max-width: 768px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Mobile view: width up to 480px */
+@media (max-width: 480px) {
+  body {
+    background-color: lightblue;
+  }
+}

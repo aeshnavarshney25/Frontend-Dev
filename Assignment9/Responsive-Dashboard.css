@@ -1,0 +1,28 @@
+/* Responsive-Dashboard.css
+   Grid layout with header, sidebar, and main content. Sidebar moves to top on small screens.
+*/
+:root{--bg:#f6f9ff;--card:#fff;--accent:#1766d1}
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);color:#0b1220}
+.header{padding:1rem;background:linear-gradient(90deg,#fff,#f3f7ff);border-bottom:1px solid rgba(11,30,60,0.04);text-align:center;font-weight:700}
+.layout{display:grid;grid-template-columns:240px 1fr;gap:1rem;max-width:1100px;margin:1rem auto;padding:0 1rem}
+.sidebar{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 10px 28px rgba(2,6,23,0.06)}
+.main{min-height:320px}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.dash-card{background:var(--card);padding:1rem;border-radius:10px;box-shadow:0 10px 28px rgba(2,6,23,0.06);transition:transform 200ms ease}
+.dash-card:hover{transform:scale(1.03);box-shadow:0 20px 44px rgba(2,6,23,0.08)}
+
+/* Load animation */
+@keyframes load{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.dash-card{animation:load 420ms ease both}
+
+@media (max-width:750px){
+  .layout{grid-template-columns:1fr;grid-auto-rows:auto}
+  .sidebar{order:-1}
+  .cards{grid-template-columns:1fr}
+}
+
+/* Comments:
+ - Grid layout places sidebar left on wide screens and top on narrow screens.
+ - Cards scale with hover and have a small load animation.
+*/

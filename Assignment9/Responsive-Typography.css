@@ -1,0 +1,19 @@
+/* Responsive-Typography.css
+   Demonstrates clamp() for scalable heading and paragraph sizes.
+*/
+:root{--bg:#fbfdff;--muted:#6b7280}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, 'Segoe UI', Roboto, Arial, sans-serif;background:var(--bg);color:#0b1220}
+.typo{max-width:900px;margin:6vh auto;padding:2rem;text-align:center}
+h1{font-size:clamp(1.5rem,4vw,3rem);margin:0 0 1rem}
+p{font-size:clamp(1rem,2vw,1.5rem);line-height:1.6;color:var(--muted);margin:0}
+
+@media (max-width:700px){
+  .typo{padding:1.25rem;margin:4vh auto}
+  p{line-height:1.45}
+}
+
+/* Comments:
+ - clamp(min, preferred, max) keeps type within a comfortable range.
+ - Use relative units to scale naturally with viewport.
+*/

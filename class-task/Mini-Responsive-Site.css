@@ -1,0 +1,77 @@
+/* Mini-Responsive-Site.css
+   Compact responsive website demo:
+   - Header + nav
+   - Hero section
+   - Card/blog section (3 cards)
+   - Contact form
+   - Footer
+
+   Uses Flexbox and Grid only. Accessible focus outlines included.
+*/
+
+:root{
+  --bg:#f6f9ff;
+  --card:#ffffff;
+  --accent:#1766d1;
+  --muted:#6b7280;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, 'Segoe UI', Roboto, Arial, sans-serif;background:var(--bg);color:#0b1220}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+
+/* Header */
+.site-header{background:linear-gradient(90deg,#fff,#f3f7ff);border-bottom:1px solid rgba(11,30,60,0.04)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:0.85rem 1rem}
+.brand{font-weight:800;font-size:1.15rem}
+.nav a{margin-left:1rem;color:var(--muted);text-decoration:none}
+.nav a:focus,.nav a:hover{color:var(--accent);outline:none}
+
+/* Hero */
+.hero{background:linear-gradient(180deg, #eaf4ff, #ffffff);padding:2.25rem 0}
+.hero-inner{display:flex;flex-direction:column;align-items:flex-start;gap:0.6rem}
+.hero h1{margin:0;font-size:clamp(1.6rem,4vw,2.4rem)}
+.sub{color:var(--muted);margin:0}
+.cta{display:inline-block;margin-top:0.6rem;padding:0.6rem 0.95rem;background:var(--accent);color:#fff;border-radius:999px;text-decoration:none;box-shadow:0 10px 26px rgba(23,102,209,0.12);transition:transform 160ms ease}
+.cta:hover{transform:translateY(-3px)}
+
+/* Cards / Blog */
+.cards-section h2{margin:1.2rem 0 0.6rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 12px 36px rgba(2,6,23,0.06);display:flex;flex-direction:column}
+.card img{width:100%;height:160px;object-fit:cover}
+.card h3{margin:0.75rem 1rem 0.25rem}
+.card p{margin:0 1rem 1rem;color:var(--muted);flex:1}
+.card:hover{transform:translateY(-6px);transition:transform 180ms ease}
+
+/* Contact form */
+.contact-section{margin-top:1.2rem}
+.contact-form{display:grid;grid-template-columns:1fr 320px;gap:1rem;align-items:start}
+.contact-form label{display:block;font-size:0.95rem;margin-bottom:0.25rem}
+.contact-form input,.contact-form textarea{width:100%;padding:0.6rem;border-radius:8px;border:1px solid rgba(11,30,60,0.06);box-shadow:0 8px 20px rgba(2,6,23,0.04)}
+.contact-form textarea{resize:vertical}
+.form-actions{grid-column:1 / -1;display:flex;gap:0.6rem}
+.btn{padding:0.6rem 0.9rem;border-radius:8px;border:2px solid transparent;cursor:pointer;font-weight:700}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-outline{background:transparent;border:1px solid rgba(11,30,60,0.06)}
+.btn:focus,.contact-form input:focus,.contact-form textarea:focus{outline:3px solid rgba(23,102,209,0.12);outline-offset:3px}
+
+/* Footer */
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted);margin-top:1.25rem}
+
+/* Responsive rules */
+@media (max-width:980px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .contact-form{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .site-header .container{padding:0.65rem}
+  .cards{grid-template-columns:1fr}
+  .hero-inner{align-items:center;text-align:center}
+  .cta{align-self:center}
+}
+
+/* Small accessibility & polish comments:
+ - All interactive elements have :focus styles for keyboard users.
+ - Use grid/flex for layout; no JS required.
+*/
