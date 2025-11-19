@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Bill Calculator</title>
+    <link rel="stylesheet" href="GroceryBillCalculator.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Grocery Bill Calculator</h1>
+            <p class="subtitle">Calculate your total and get discounts!</p>
+        </header>
+
+        <main>
+            <form id="billForm" class="form-container">
+                <div class="input-group">
+                    <label for="price">Price per item (₹)</label>
+                    <input 
+                        type="number" 
+                        id="price" 
+                        placeholder="Enter price" 
+                        min="0" 
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label for="quantity">Quantity</label>
+                    <input 
+                        type="number" 
+                        id="quantity" 
+                        placeholder="Enter quantity" 
+                        min="0" 
+                        step="1"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn-calculate">Calculate Bill</button>
+            </form>
+
+            <!-- Results Section -->
+            <div id="resultsSection" class="results-section hidden">
+                <div class="results-card">
+                    <div class="result-item">
+                        <span class="label">Original Total:</span>
+                        <span class="value">₹<span id="originalTotal">0.00</span></span>
+                    </div>
+
+                    <div class="result-item" id="discountItem" class="hidden">
+                        <span class="label discount-label">Discount Applied (10%):</span>
+                        <span class="value discount-value">- ₹<span id="discountAmount">0.00</span></span>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="result-item final">
+                        <span class="label">Final Amount:</span>
+                        <span class="value final-amount">₹<span id="finalAmount">0.00</span></span>
+                    </div>
+                </div>
+
+                <div id="discountMessage" class="discount-message hidden">
+                    <span class="discount-icon"></span>
+                    <p>Great! You got a <strong>10% discount</strong> on your purchase!</p>
+                </div>
+
+                <button type="reset" class="btn-reset" onclick="resetCalculator()">Calculate Again</button>
+            </div>
+
+            <!-- Info Section -->
+            <!-- <div class="info-section">
+                <h3>How it works:</h3>
+                <ul>
+                    <li>Enter the price per item and quantity</li>
+                    <li>Click "Calculate Bill"</li>
+                    <li>If total exceeds ₹1000, you get a <strong>10% discount</strong> automatically!</li>
+                    <li>See your final amount below</li>
+                </ul>
+            </div> -->
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Grocery Shop</p>
+        </footer>
+    </div>
+
+    <script src="GroceryBillCalculator.js"></script>
+</body>
+</html>
+
