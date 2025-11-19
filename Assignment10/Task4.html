@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu - Taste of Italy</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-danger text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Taste of Italy</h1>
+            <p class="lead">Today's Special Menu</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            
+            <!-- Featured Image -->
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto">
+                    <!-- .figure: Bootstrap figure component for images with captions -->
+                    <figure class="figure w-100">
+                        <!-- .img-fluid: Responsive image -->
+                        <img src="https://images.unsplash.com/photo-1506401955175-72367dba1d28?w=600&h=400&fit=crop" 
+                             class="figure-img img-fluid rounded" alt="Italian Pasta">
+                        <!-- .figure-caption: Image caption -->
+                        <figcaption class="figure-caption text-center">Chef's Special - Fresh Homemade Pasta</figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Chef's Specials Section -->
+            <section class="mb-5">
+                <h3 class="fw-bold mb-4">🌟 Chef's Specials</h3>
+                <!-- .list-group: Bootstrap list group component -->
+                <ul class="list-group">
+                    <!-- .list-group-item: Individual list item -->
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span><strong>Spaghetti Carbonara</strong> - Fresh pasta with bacon, eggs, and cheese</span>
+                        <span class="badge bg-success rounded-pill">$14.99</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span><strong>Seafood Risotto</strong> - Creamy arborio rice with shrimp and scallops</span>
+                        <span class="badge bg-success rounded-pill">$18.99</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span><strong>Tiramisu</strong> - Traditional Italian dessert with mascarpone</span>
+                        <span class="badge bg-success rounded-pill">$6.99</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Menu Table -->
+            <section class="mb-5">
+                <h3 class="fw-bold mb-4">Today's Menu</h3>
+                <!-- .table: Bootstrap table component -->
+                <!-- .table-striped: Alternating row colors for readability -->
+                <!-- .table-hover: Highlight row on hover -->
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <!-- Table header -->
+                            <tr>
+                                <th>Category</th>
+                                <th>Dish Name</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Appetizers -->
+                            <tr class="table-active">
+                                <td colspan="4"><strong>Appetizers</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Starter</td>
+                                <td>Bruschetta</td>
+                                <td>Toasted bread with tomato and basil</td>
+                                <td>$8.99</td>
+                            </tr>
+                            <tr>
+                                <td>Starter</td>
+                                <td>Calamari Fritti</td>
+                                <td>Crispy fried squid with marinara sauce</td>
+                                <td>$10.99</td>
+                            </tr>
+
+                            <!-- Main Courses -->
+                            <tr class="table-active">
+                                <td colspan="4"><strong>Main Courses</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Pasta</td>
+                                <td>Fettuccine Alfredo</td>
+                                <td>Creamy parmesan sauce with fresh fettuccine</td>
+                                <td>$12.99</td>
+                            </tr>
+                            <tr>
+                                <td>Pasta</td>
+                                <td>Lasagna Bolognese</td>
+                                <td>Layers of pasta with meat sauce and cheese</td>
+                                <td>$13.99</td>
+                            </tr>
+                            <tr>
+                                <td>Meat</td>
+                                <td>Osso Buco</td>
+                                <td>Braised veal shank with vegetables</td>
+                                <td>$22.99</td>
+                            </tr>
+
+                            <!-- Desserts -->
+                            <tr class="table-active">
+                                <td colspan="4"><strong>Desserts</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Sweet</td>
+                                <td>Panna Cotta</td>
+                                <td>Smooth Italian cream pudding</td>
+                                <td>$5.99</td>
+                            </tr>
+                            <tr>
+                                <td>Sweet</td>
+                                <td>Gelato Selection</td>
+                                <td>Three scoops of Italian ice cream</td>
+                                <td>$7.99</td>
+                            </tr>
+
+                            <!-- Beverages -->
+                            <tr class="table-active">
+                                <td colspan="4"><strong>Beverages</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Drink</td>
+                                <td>Italian Wine</td>
+                                <td>House wine selection (glass)</td>
+                                <td>$5.99</td>
+                            </tr>
+                            <tr>
+                                <td>Drink</td>
+                                <td>Espresso</td>
+                                <td>Strong Italian coffee</td>
+                                <td>$2.99</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="bg-light p-5 rounded text-center">
+                <!-- .lead: Larger, prominent text -->
+                <p class="lead mb-4">For reservations, call us at <strong>(555) 123-4567</strong></p>
+                <a href="#" class="btn btn-danger btn-lg">Make a Reservation</a>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2025 Taste of Italy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

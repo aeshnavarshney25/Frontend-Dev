@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Travel - Book Your Journey</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <h1 class="fw-bold mb-0">✈️ Wanderlust Travel Agency</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Carousel Section -->
+        <section class="mb-5">
+            <!-- .carousel: Bootstrap carousel component -->
+            <!-- data-bs-ride="carousel": Auto-scroll the carousel -->
+            <!-- data-bs-interval: Time in milliseconds between slides (3000 = 3 seconds) -->
+            <div id="destinationCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                
+                <!-- .carousel-indicators: Carousel navigation dots -->
+                <div class="carousel-indicators">
+                    <!-- Indicator buttons for each slide -->
+                    <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                    <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- .carousel-inner: Container for slides -->
+                <div class="carousel-inner">
+                    
+                    <!-- Slide 1 -->
+                    <!-- .carousel-item: Individual slide -->
+                    <!-- .active: First slide is active by default -->
+                    <div class="carousel-item active" style="height: 500px; background: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=500&fit=crop') center/cover;">
+                        <!-- .carousel-caption: Caption overlay on slide -->
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+                            <h5 class="fw-bold" style="font-size: 2rem;">Paris, France</h5>
+                            <p class="lead">Experience the City of Lights with iconic landmarks and romantic ambiance</p>
+                            <a href="#" class="btn btn-primary">Explore Package</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item" style="height: 500px; background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=500&fit=crop') center/cover;">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+                            <h5 class="fw-bold" style="font-size: 2rem;">Tokyo, Japan</h5>
+                            <p class="lead">Discover the perfect blend of ancient traditions and cutting-edge technology</p>
+                            <a href="#" class="btn btn-primary">Explore Package</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item" style="height: 500px; background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=500&fit=crop') center/cover;">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-4 rounded">
+                            <h5 class="fw-bold" style="font-size: 2rem;">New York, USA</h5>
+                            <p class="lead">The city that never sleeps awaits with endless entertainment and culture</p>
+                            <a href="#" class="btn btn-primary">Explore Package</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Carousel Controls -->
+                <!-- .carousel-control-prev/next: Navigation buttons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Booking Progress Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h3 class="fw-bold mb-4">Your Booking Progress</h3>
+                
+                <!-- Booking Stage Indicators -->
+                <div class="row mb-5">
+                    <!-- .col-md-3: 4 columns on medium screens -->
+                    <div class="col-md-3 text-center">
+                        <div class="badge bg-success p-3 mb-2" style="font-size: 1.5rem;">✓</div>
+                        <h6 class="fw-bold">Destination Selected</h6>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="badge bg-success p-3 mb-2" style="font-size: 1.5rem;">✓</div>
+                        <h6 class="fw-bold">Travel Dates</h6>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="badge bg-warning p-3 mb-2" style="font-size: 1.5rem;">◐</div>
+                        <h6 class="fw-bold">Payment Info</h6>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="badge bg-secondary p-3 mb-2" style="font-size: 1.5rem;">4</div>
+                        <h6 class="fw-bold">Confirmation</h6>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <!-- .progress: Bootstrap progress bar container -->
+                <h5 class="fw-bold mb-3">Booking Completion: 70%</h5>
+                <div class="progress mb-5" style="height: 30px;">
+                    <!-- .progress-bar: Filled progress bar -->
+                    <!-- .progress-bar-striped: Striped pattern -->
+                    <!-- .progress-bar-animated: Animated striped pattern -->
+                    <!-- style="width: 70%": Set progress percentage -->
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                         role="progressbar" 
+                         style="width: 70%" 
+                         aria-valuenow="70" 
+                         aria-valuemin="0" 
+                         aria-valuemax="100">
+                        70% Complete
+                    </div>
+                </div>
+
+                <!-- Multiple Progress Bars Example -->
+                <h5 class="fw-bold mb-3">Budget Allocation</h5>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Accommodation</span>
+                        <span>$1,200 / $2,000</span>
+                    </div>
+                    <div class="progress" style="height: 20px;">
+                        <!-- .bg-primary: Color utility for bar -->
+                        <div class="progress-bar bg-primary" style="width: 60%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Transportation</span>
+                        <span>$800 / $1,000</span>
+                    </div>
+                    <div class="progress" style="height: 20px;">
+                        <!-- .bg-success: Success color -->
+                        <div class="progress-bar bg-success" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Activities & Food</span>
+                        <span>$400 / $1,500</span>
+                    </div>
+                    <div class="progress" style="height: 20px;">
+                        <!-- .bg-info: Info color -->
+                        <div class="progress-bar bg-info" style="width: 27%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-5">
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Emergency Fund</span>
+                        <span>$0 / $500</span>
+                    </div>
+                    <div class="progress" style="height: 20px;">
+                        <!-- .bg-warning: Warning color -->
+                        <div class="progress-bar bg-warning" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="text-center">
+                    <a href="#" class="btn btn-primary btn-lg me-2">Continue Booking</a>
+                    <a href="#" class="btn btn-outline-secondary btn-lg">Save Draft</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Packages -->
+        <section class="py-5">
+            <div class="container">
+                <h3 class="fw-bold mb-5 text-center">Popular Packages</h3>
+                
+                <!-- .row: Flex grid layout -->
+                <div class="row g-4">
+                    
+                    <!-- Package 1 -->
+                    <!-- .col-md-4: 3 columns on medium screens -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=250&fit=crop" 
+                                 class="card-img-top" alt="Paris Package">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Paris Romance</h5>
+                                <p class="text-muted">7 days / 6 nights</p>
+                                <p class="card-text">Including luxury hotel, museum tickets, and Seine river cruise.</p>
+                                <p class="fw-bold text-primary" style="font-size: 1.5rem;">$1,899</p>
+                                <a href="#" class="btn btn-primary w-100">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package 2 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop" 
+                                 class="card-img-top" alt="Tokyo Package">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Tokyo Adventure</h5>
+                                <p class="text-muted">10 days / 9 nights</p>
+                                <p class="card-text">Experience temples, modern cities, and authentic Japanese cuisine.</p>
+                                <p class="fw-bold text-primary" style="font-size: 1.5rem;">$2,499</p>
+                                <a href="#" class="btn btn-primary w-100">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package 3 -->
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&h=250&fit=crop" 
+                                 class="card-img-top" alt="NYC Package">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">NYC Getaway</h5>
+                                <p class="text-muted">5 days / 4 nights</p>
+                                <p class="card-text">Broadway shows, iconic landmarks, and world-class dining experiences.</p>
+                                <p class="fw-bold text-primary" style="font-size: 1.5rem;">$1,599</p>
+                                <a href="#" class="btn btn-primary w-100">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h3 class="fw-bold text-center mb-5">Need Help?</h3>
+                
+                <!-- Contact Info -->
+                <div class="row g-4 text-center">
+                    <div class="col-md-4">
+                        <h5 class="fw-bold">📞 Call Us</h5>
+                        <p class="lead">(555) 123-4567</p>
+                        <p class="text-muted">Available 24/7</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="fw-bold">📧 Email Us</h5>
+                        <p class="lead">info@wanderlust.com</p>
+                        <p class="text-muted">Response within 2 hours</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5 class="fw-bold">💬 Live Chat</h5>
+                        <p class="lead">Chat with our agents</p>
+                        <p class="text-muted">10 AM - 10 PM EST</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Wanderlust Travel</h5>
+                    <p class="text-muted">Your trusted travel companion since 2010.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Quick Links</h5>
+                    <!-- .list-unstyled: Remove bullet points from list -->
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#" class="text-decoration-none text-muted">Destinations</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Packages</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Follow Us</h5>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-outline-light btn-sm">Facebook</a>
+                        <a href="#" class="btn btn-outline-light btn-sm">Instagram</a>
+                        <a href="#" class="btn btn-outline-light btn-sm">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="bg-secondary">
+            
+            <p class="text-center text-muted mb-0">&copy; 2025 Wanderlust Travel Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications Dashboard</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Header -->
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+            <h1 class="fw-bold">Notifications Dashboard</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            
+            <!-- Alert Summary Well -->
+            <section class="mb-5">
+                <!-- .bg-light: Light background, .p-4: Padding utility for spacing -->
+                <div class="bg-white border rounded p-4">
+                    <h4 class="fw-bold mb-3">📊 Notification Summary</h4>
+                    <!-- .row: Flex grid layout -->
+                    <div class="row text-center">
+                        <!-- .col-md-3: 4 columns on medium screens -->
+                        <div class="col-md-3">
+                            <!-- .badge: Bootstrap badge component -->
+                            <span class="badge bg-success p-3" style="font-size: 1.2rem;">15</span>
+                            <p class="mt-2 fw-bold">Success Messages</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="badge bg-info p-3" style="font-size: 1.2rem;">8</span>
+                            <p class="mt-2 fw-bold">Info Messages</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="badge bg-warning p-3" style="font-size: 1.2rem;">3</span>
+                            <p class="mt-2 fw-bold">Warnings</p>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="badge bg-danger p-3" style="font-size: 1.2rem;">2</span>
+                            <p class="mt-2 fw-bold">Errors</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Success Alert -->
+            <section class="mb-4">
+                <!-- .alert: Bootstrap alert component -->
+                <!-- .alert-success: Green success alert style -->
+                <!-- .alert-dismissible: Makes alert dismissible with close button -->
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>✓ Success!</strong> Your profile has been updated successfully.
+                    <!-- .btn-close: Bootstrap close button -->
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </section>
+
+            <!-- Info Alert -->
+            <section class="mb-4">
+                <!-- .alert-info: Blue info alert style -->
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <strong>ℹ️ Information:</strong> A new version of the app is available. Please update to the latest version for best performance.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </section>
+
+            <!-- Warning Alert -->
+            <section class="mb-4">
+                <!-- .alert-warning: Yellow/orange warning alert style -->
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <strong>⚠️ Warning:</strong> Your session will expire in 15 minutes. Please save your work.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </section>
+
+            <!-- Danger Alert -->
+            <section class="mb-5">
+                <!-- .alert-danger: Red danger/error alert style -->
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>❌ Error:</strong> Failed to connect to the server. Please check your internet connection.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </section>
+
+            <!-- Notification Logs Section -->
+            <section>
+                <h4 class="fw-bold mb-4">📝 Recent Notifications</h4>
+                
+                <!-- Card Container for organized notifications -->
+                <div class="card">
+                    <!-- .card-header: Card header section -->
+                    <div class="card-header bg-light">
+                        <h5 class="mb-0">Activity Log</h5>
+                    </div>
+                    
+                    <!-- Notification List -->
+                    <!-- .list-group: Bootstrap list group component -->
+                    <ul class="list-group list-group-flush">
+                        <!-- Success Notification -->
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-success rounded-pill me-2">✓</span>
+                                <strong>User logged in successfully</strong>
+                                <br>
+                                <small class="text-muted">Today at 10:30 AM</small>
+                            </div>
+                            <span class="badge bg-light text-dark">Just now</span>
+                        </li>
+
+                        <!-- Info Notification -->
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-info rounded-pill me-2">ℹ️</span>
+                                <strong>New message from admin</strong>
+                                <br>
+                                <small class="text-muted">Today at 10:15 AM</small>
+                            </div>
+                            <span class="badge bg-light text-dark">15 mins ago</span>
+                        </li>
+
+                        <!-- Warning Notification -->
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-warning rounded-pill me-2">⚠️</span>
+                                <strong>Unusual login attempt detected</strong>
+                                <br>
+                                <small class="text-muted">Today at 9:45 AM</small>
+                            </div>
+                            <span class="badge bg-light text-dark">45 mins ago</span>
+                        </li>
+
+                        <!-- Success Notification -->
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-success rounded-pill me-2">✓</span>
+                                <strong>Payment processed successfully</strong>
+                                <br>
+                                <small class="text-muted">Today at 9:00 AM</small>
+                            </div>
+                            <span class="badge bg-light text-dark">1 hour ago</span>
+                        </li>
+
+                        <!-- Error Notification -->
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-danger rounded-pill me-2">❌</span>
+                                <strong>Database backup failed</strong>
+                                <br>
+                                <small class="text-muted">Yesterday at 11:30 PM</small>
+                            </div>
+                            <span class="badge bg-light text-dark">1 day ago</span>
+                        </li>
+
+                        <!-- Info Notification -->
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <div>
+                                <span class="badge bg-info rounded-pill me-2">ℹ️</span>
+                                <strong>System maintenance scheduled</strong>
+                                <br>
+                                <small class="text-muted">Yesterday at 8:00 PM</small>
+                            </div>
+                            <span class="badge bg-light text-dark">2 days ago</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Action Buttons -->
+            <section class="mt-5 text-center">
+                <a href="#" class="btn btn-primary me-2">View All Notifications</a>
+                <a href="#" class="btn btn-outline-secondary">Clear All</a>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2025 Notifications Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

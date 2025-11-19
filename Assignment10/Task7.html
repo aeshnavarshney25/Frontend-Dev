@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker - Project Manager</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Header -->
+    <header class="bg-dark text-white py-4">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="fw-bold">📋 Task Manager</h1>
+            <!-- Pending badge in header -->
+            <!-- .badge: Small indicator component -->
+            <span class="badge bg-danger rounded-pill p-2" style="font-size: 1rem;">
+                <span id="pendingCount">12</span> Pending Tasks
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5">
+        <div class="container">
+            
+            <!-- Statistics Section -->
+            <section class="mb-5">
+                <div class="row g-3 text-center">
+                    <!-- .col-md-3: 4 columns on medium screens -->
+                    <div class="col-md-3">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body">
+                                <!-- .badge: Task status badges -->
+                                <h5 class="card-title">Total Tasks</h5>
+                                <h3 class="fw-bold">24</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-success text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Completed</h5>
+                                <h3 class="fw-bold">12</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-warning text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">In Progress</h5>
+                                <h3 class="fw-bold">8</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-danger text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending</h5>
+                                <h3 class="fw-bold">4</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tasks List -->
+            <section>
+                <h4 class="fw-bold mb-4">Active Tasks</h4>
+                
+                <!-- .list-group: Bootstrap list group component -->
+                <ul class="list-group">
+                    
+                    <!-- Task 1 - High Priority -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">
+                                <!-- .badge: Priority indicator badges -->
+                                <span class="badge bg-danger">High</span>
+                                <strong>Design Homepage Layout</strong>
+                            </h6>
+                            <small class="text-muted">Due: Nov 25, 2025 | Assigned to: Sarah</small>
+                        </div>
+                        <button class="btn btn-sm btn-success">
+                            ✓ Mark Complete
+                        </button>
+                    </li>
+
+                    <!-- Task 2 - High Priority -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">
+                                <span class="badge bg-danger">High</span>
+                                <strong>Implement User Authentication</strong>
+                            </h6>
+                            <small class="text-muted">Due: Nov 24, 2025 | Assigned to: Mike</small>
+                        </div>
+                        <button class="btn btn-sm btn-success">
+                            ✓ Mark Complete
+                        </button>
+                    </li>
+
+                    <!-- Task 3 - Medium Priority -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">
+                                <!-- Medium priority badge -->
+                                <span class="badge bg-warning">Medium</span>
+                                <strong>Setup Database Connection</strong>
+                            </h6>
+                            <small class="text-muted">Due: Nov 26, 2025 | Assigned to: Emma</small>
+                        </div>
+                        <button class="btn btn-sm btn-success">
+                            ✓ Mark Complete
+                        </button>
+                    </li>
+
+                    <!-- Task 4 - Medium Priority -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">
+                                <span class="badge bg-warning">Medium</span>
+                                <strong>Create API Documentation</strong>
+                            </h6>
+                            <small class="text-muted">Due: Nov 27, 2025 | Assigned to: David</small>
+                        </div>
+                        <button class="btn btn-sm btn-success">
+                            ✓ Mark Complete
+                        </button>
+                    </li>
+
+                    <!-- Task 5 - Low Priority -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">
+                                <!-- Low priority badge -->
+                                <span class="badge bg-info">Low</span>
+                                <strong>Add Dark Mode Theme</strong>
+                            </h6>
+                            <small class="text-muted">Due: Nov 28, 2025 | Assigned to: Alex</small>
+                        </div>
+                        <button class="btn btn-sm btn-success">
+                            ✓ Mark Complete
+                        </button>
+                    </li>
+
+                    <!-- Task 6 - High Priority -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">
+                                <span class="badge bg-danger">High</span>
+                                <strong>Optimize Website Performance</strong>
+                            </h6>
+                            <small class="text-muted">Due: Nov 25, 2025 | Assigned to: Chris</small>
+                        </div>
+                        <button class="btn btn-sm btn-success">
+                            ✓ Mark Complete
+                        </button>
+                    </li>
+
+                    <!-- Task 7 - Low Priority -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">
+                                <span class="badge bg-info">Low</span>
+                                <strong>Write Unit Tests</strong>
+                            </h6>
+                            <small class="text-muted">Due: Nov 29, 2025 | Assigned to: Jordan</small>
+                        </div>
+                        <button class="btn btn-sm btn-success">
+                            ✓ Mark Complete
+                        </button>
+                    </li>
+
+                    <!-- Task 8 - Medium Priority -->
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="flex-grow-1">
+                            <h6 class="mb-1">
+                                <span class="badge bg-warning">Medium</span>
+                                <strong>Deploy to Production</strong>
+                            </h6>
+                            <small class="text-muted">Due: Nov 30, 2025 | Assigned to: Lisa</small>
+                        </div>
+                        <button class="btn btn-sm btn-success">
+                            ✓ Mark Complete
+                        </button>
+                    </li>
+
+                </ul>
+            </section>
+
+            <!-- Completed Tasks Section -->
+            <section class="mt-5">
+                <h4 class="fw-bold mb-4">✅ Completed Tasks (12)</h4>
+                
+                <!-- .list-group: Completed tasks list -->
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="badge bg-success me-2">✓</span>
+                        <strong>Project Planning</strong>
+                        <small class="text-muted d-block">Completed on Nov 15, 2025</small>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge bg-success me-2">✓</span>
+                        <strong>Wireframe Design</strong>
+                        <small class="text-muted d-block">Completed on Nov 18, 2025</small>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge bg-success me-2">✓</span>
+                        <strong>Environment Setup</strong>
+                        <small class="text-muted d-block">Completed on Nov 19, 2025</small>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Add New Task Section -->
+            <section class="mt-5 p-4 bg-white rounded">
+                <h5 class="fw-bold mb-3">➕ Add New Task</h5>
+                <form class="row g-3">
+                    <!-- .col-md-6: Half width on medium+ screens -->
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Task title" required>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Bootstrap form select -->
+                        <select class="form-select">
+                            <option>Priority</option>
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-primary w-100">Add Task</button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2025 Task Manager. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
