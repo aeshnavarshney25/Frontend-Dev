@@ -1,0 +1,9 @@
+{
+  "students": [
+    { "id": 1, "name": "Aisha Khan", "section": "A", "marks": 92, "grade": "A" },
+    { "id": 2, "name": "Rajat Sharma", "section": "B", "marks": 78, "grade": "B" },
+    { "id": 3, "name": "Mona Singh", "section": "A", "marks": 65, "grade": "C" },
+    { "id": 4, "name": "Vikram Rao", "section": "C", "marks": 48, "grade": "F" },
+    { "id": 5, "name": "Neha Patel", "section": "B", "marks": 88, "grade": "A" }
+  ]
+}
